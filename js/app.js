@@ -100,7 +100,7 @@ function initRiskChecker() {
     const riskFactors = [];
     
     const highRiskCountries = ['china', 'russia', 'iran', 'north-korea', 'uae', 'saudi-arabia', 'egypt', 'turkey', 'vietnam', 'thailand'];
-    const mediumRiskCountries = ['india', 'indonesia', 'malaysia', 'brazil', 'mexico', 'south-africa'];
+    const mediumRiskCountries = ['india', 'indonesia', 'malaysia', 'brazil', 'mexico', 'south-africa', 'morocco', 'argentina'];
     
     if (highRiskCountries.includes(destination)) {
       riskScore += 40;
