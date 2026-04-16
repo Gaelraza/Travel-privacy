@@ -1,43 +1,32 @@
-// Travel Privacy Toolkit - Main JavaScript
-
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize the app
   initNavigation();
   initRiskChecker();
   initChecklist();
   initCountryNotes();
 });
 
-// Navigation handling for single-page app
 function initNavigation() {
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('nav ul');
   const navLinks = document.querySelectorAll('nav a[data-page]');
   
-  // Mobile menu toggle
   if (navToggle) {
     navToggle.addEventListener('click', function() {
       navMenu.classList.toggle('active');
     });
   }
   
-  // Page navigation
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const pageId = this.getAttribute('data-page');
       navigateTo(pageId);
-      
-      // Close mobile menu
       navMenu.classList.remove('active');
-      
-      // Update active state in nav
       navLinks.forEach(l => l.classList.remove('active'));
       this.classList.add('active');
     });
   });
   
-  // Handle browser back/forward
   window.addEventListener('popstate', function() {
     const pageId = getPageFromHash();
     if (pageId) {
@@ -46,7 +35,6 @@ function initNavigation() {
     }
   });
   
-  // Initial page load
   const initialPage = getPageFromHash() || 'home';
   navigateTo(initialPage);
   updateNavActive(initialPage);
@@ -59,24 +47,20 @@ function getPageFromHash() {
 }
 
 function navigateTo(pageId) {
-  // Hide all pages
   document.querySelectorAll('.page').forEach(page => {
     page.classList.remove('active');
   });
   
-  // Show target page
   const targetPage = document.getElementById(pageId);
   if (targetPage) {
     targetPage.classList.add('active');
     window.scrollTo(0, 0);
   }
   
-  // Update URL hash without triggering popstate
   if (window.location.hash.slice(1) !== pageId) {
     history.pushState({ page: pageId }, '', `#${pageId}`);
   }
   
-  // Update page title
   const titles = {
     'home': 'Travel Privacy Toolkit - Home',
     'risk-checker': 'Risk Checker - Travel Privacy Toolkit',
@@ -100,7 +84,6 @@ function updateNavActive(pageId) {
   });
 }
 
-// Risk Checker functionality
 function initRiskChecker() {
   const riskForm = document.getElementById('risk-form');
   if (!riskForm) return;
@@ -113,11 +96,9 @@ function initRiskChecker() {
     const devices = document.querySelectorAll('input[name="devices"]:checked').length;
     const sensitiveData = document.getElementById('sensitive-data').value;
     
-    // Calculate risk score
     let riskScore = 0;
     const riskFactors = [];
     
-    // High-risk countries
     const highRiskCountries = ['china', 'russia', 'iran', 'north-korea', 'uae', 'saudi-arabia', 'egypt', 'turkey', 'vietnam', 'thailand'];
     const mediumRiskCountries = ['india', 'indonesia', 'malaysia', 'brazil', 'mexico', 'south-africa'];
     
@@ -129,7 +110,6 @@ function initRiskChecker() {
       riskFactors.push('Moderate surveillance country');
     }
     
-    // Purpose of travel
     if (purpose === 'journalism' || purpose === 'activism') {
       riskScore += 30;
       riskFactors.push('High-risk travel purpose');
@@ -138,7 +118,6 @@ function initRiskChecker() {
       riskFactors.push('Business data at risk');
     }
     
-    // Number of devices
     if (devices >= 3) {
       riskScore += 20;
       riskFactors.push('Multiple devices increase attack surface');
@@ -146,13 +125,11 @@ function initRiskChecker() {
       riskScore += 10;
     }
     
-    // Sensitive data
     if (sensitiveData === 'yes') {
       riskScore += 25;
       riskFactors.push('Sensitive data increases target value');
     }
     
-    // Determine risk level
     let riskLevel, riskClass;
     if (riskScore >= 60) {
       riskLevel = 'HIGH';
@@ -165,7 +142,6 @@ function initRiskChecker() {
       riskClass = 'risk-low';
     }
     
-    // Display results
     displayRiskResults(riskLevel, riskClass, riskScore, riskFactors, destination);
   });
 }
@@ -174,7 +150,6 @@ function displayRiskResults(riskLevel, riskClass, riskScore, riskFactors, destin
   const resultsDiv = document.getElementById('risk-results');
   if (!resultsDiv) return;
   
-  // Get personalized recommendations
   const recommendations = getRecommendations(riskLevel, destination);
   
   let factorsHTML = '';
@@ -192,7 +167,6 @@ function displayRiskResults(riskLevel, riskClass, riskScore, riskFactors, destin
   });
   recommendationsHTML += '</ul></div>';
   
-  // Add VPN recommendation with affiliate link
   if (riskLevel === 'HIGH' || riskLevel === 'MEDIUM') {
     recommendationsHTML += `
       <div class="card mt-md" style="background: #e7f3ff; border-left: 4px solid #0066cc;">
@@ -254,14 +228,11 @@ function getRecommendations(riskLevel, destination) {
   return baseRecommendations;
 }
 
-// Checklist functionality
 function initChecklist() {
   const checklistItems = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-  const progressContainer = document.querySelector('.progress-container');
   
   if (checklistItems.length === 0) return;
   
-  // Load saved checklist state
   loadChecklistState();
   
   checklistItems.forEach(item => {
@@ -278,10 +249,8 @@ function initChecklist() {
     });
   });
   
-  // Initial progress update
   updateProgress();
   
-  // Reset button
   const resetBtn = document.getElementById('reset-checklist');
   if (resetBtn) {
     resetBtn.addEventListener('click', function() {
@@ -343,7 +312,6 @@ function loadChecklistState() {
   }
 }
 
-// Country Notes functionality
 function initCountryNotes() {
   const searchInput = document.getElementById('country-search');
   if (!searchInput) return;
@@ -365,12 +333,6 @@ function initCountryNotes() {
   });
 }
 
-// Utility functions
-function smoothScrollTo(element) {
-  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// Export functions for potential external use
 window.TravelPrivacyToolkit = {
   navigateTo,
   updateProgress,

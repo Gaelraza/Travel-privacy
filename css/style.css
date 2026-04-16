@@ -1,5 +1,3 @@
-/* Travel Privacy Toolkit - Mobile-First CSS */
-
 :root {
   --primary-color: #0066cc;
   --primary-dark: #004c99;
@@ -65,7 +63,6 @@ img {
   padding: 0 var(--spacing-sm);
 }
 
-/* Header & Navigation */
 header {
   background: var(--white);
   box-shadow: var(--shadow);
@@ -148,7 +145,6 @@ nav ul li a.active {
   text-decoration: none;
 }
 
-/* Main Content */
 main {
   flex: 1;
   padding: var(--spacing-lg) 0;
@@ -162,7 +158,6 @@ main {
   display: block;
 }
 
-/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
   color: var(--white);
@@ -212,7 +207,6 @@ main {
   background: var(--primary-dark);
 }
 
-/* Cards */
 .card {
   background: var(--white);
   border-radius: var(--radius);
@@ -237,7 +231,6 @@ main {
   margin-bottom: var(--spacing-sm);
 }
 
-/* Forms */
 .form-group {
   margin-bottom: var(--spacing-md);
 }
@@ -272,7 +265,6 @@ select.form-control {
   padding-right: var(--spacing-xl);
 }
 
-/* Checklist */
 .checklist-item {
   display: flex;
   align-items: flex-start;
@@ -308,7 +300,6 @@ select.form-control {
   color: var(--text-light);
 }
 
-/* Risk Level Indicators */
 .risk-level {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-sm);
@@ -333,7 +324,6 @@ select.form-control {
   color: #721c24;
 }
 
-/* Country Notes */
 .country-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -358,7 +348,6 @@ select.form-control {
   font-size: 1.5rem;
 }
 
-/* Progress Bar */
 .progress-container {
   background: var(--secondary-color);
   border-radius: var(--radius);
@@ -379,7 +368,6 @@ select.form-control {
   font-weight: 600;
 }
 
-/* Footer */
 footer {
   background: var(--text-color);
   color: var(--white);
@@ -427,7 +415,6 @@ footer {
   color: #cccccc;
 }
 
-/* Affiliate Disclosure Box */
 .affiliate-disclosure {
   background: #fff3cd;
   border-left: 4px solid var(--warning);
@@ -441,7 +428,6 @@ footer {
   color: #856404;
 }
 
-/* Legal Pages */
 .legal-content {
   background: var(--white);
   padding: var(--spacing-lg);
@@ -470,7 +456,6 @@ footer {
   padding-left: var(--spacing-md);
 }
 
-/* Utility Classes */
 .text-center {
   text-align: center;
 }
@@ -495,7 +480,6 @@ footer {
   display: none;
 }
 
-/* Tablet and up */
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;
@@ -543,14 +527,12 @@ footer {
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   .country-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Print Styles */
 @media print {
   header, footer, .nav-toggle {
     display: none;

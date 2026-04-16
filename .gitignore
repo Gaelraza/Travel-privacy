@@ -13,7 +13,9 @@ target/
 venv/
 node_modules/
 .julia/
-zig-cache/
+.zig-cache/
+.mypy_cache/
+.pytest_cache/
 .gradle/
 
 # Logs and temp files
@@ -25,7 +27,7 @@ zig-cache/
 # Environment
 .env
 .env.local
-*.env.*
+.env.*
 
 # Editors
 .vscode/
@@ -33,7 +35,7 @@ zig-cache/
 *.swp
 *.swo
 
-# System
+# System files
 .DS_Store
 Thumbs.db
 
