@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free travel privacy toolkit with risk assessment, security checklist, and country-specific privacy guides. Protect your digital privacy while traveling.">
+  <meta name="keywords" content="travel privacy, VPN, digital security, travel security, online privacy, data protection">
+  <meta name="author" content="Travel Privacy Toolkit">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Travel Privacy Toolkit - Protect Your Digital Privacy While Traveling">
+  <meta property="og:description" content="Free tools and resources to help you stay safe and private while traveling abroad.">
+  <meta property="og:type" content="website">
+  
+  <title>Travel Privacy Toolkit - Home</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon (optional - add favicon.ico to assets folder) -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#home" class="logo" data-page="home">🔒 Travel Privacy Toolkit</a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav>
+        <ul>
+          <li><a href="#home" data-page="home">Home</a></li>
+          <li><a href="#risk-checker" data-page="risk-checker">Risk Checker</a></li>
+          <li><a href="#checklist" data-page="checklist">Checklist</a></li>
+          <li><a href="#country-notes" data-page="country-notes">Country Notes</a></li>
+          <li><a href="#about" data-page="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <h1>Protect Your Digital Privacy While Traveling</h1>
+        <p>Free tools and resources to help you assess risks, prepare securely, and stay safe online wherever you go in the world.</p>
+        <a href="#risk-checker" class="btn" data-page="risk-checker">Check Your Risk Level</a>
+      </div>
+      
+      <div class="card">
+        <h3>🛡️ Why Travel Privacy Matters</h3>
+        <p>When you travel, your digital footprint becomes more vulnerable. Public Wi-Fi, border crossings, surveillance, and unfamiliar networks all pose risks to your personal data and online security.</p>
+        <p>This toolkit helps you understand these risks and take practical steps to protect yourself—completely free, with no signup required.</p>
+      </div>
+      
+      <div class="country-grid">
+        <div class="card">
+          <h3>📊 Risk Checker</h3>
+          <p>Get a personalized risk assessment based on your destination, travel purpose, and digital habits. Know what you're facing before you go.</p>
+          <a href="#risk-checker" class="btn btn-primary" data-page="risk-checker">Try It Now</a>
+        </div>
+        
+        <div class="card">
+          <h3>✅ Security Checklist</h3>
+          <p>A comprehensive pre-travel checklist to ensure you've covered all the essential privacy and security measures before departure.</p>
+          <a href="#checklist" class="btn btn-primary" data-page="checklist">View Checklist</a>
+        </div>
+        
+        <div class="card">
+          <h3>🌍 Country Notes</h3>
+          <p>Country-specific privacy guides covering surveillance laws, internet censorship, and digital rights for popular travel destinations.</p>
+          <a href="#country-notes" class="btn btn-primary" data-page="country-notes">Explore Countries</a>
+        </div>
+      </div>
+      
+      <!-- Affiliate Disclosure Preview -->
+      <div class="affiliate-disclosure mt-md">
+        <p><strong>Transparency Notice:</strong> This website contains affiliate links, including recommendations for NordVPN. If you make a purchase through these links, we may earn a commission at no additional cost to you. We only recommend services we believe provide genuine value for traveler privacy.</p>
+      </div>
+    </section>
+
+    <!-- Risk Checker Page -->
+    <section id="risk-checker" class="page">
+      <div class="hero">
+        <h1>Risk Assessment Tool</h1>
+        <p>Answer a few questions to get a personalized privacy risk assessment for your upcoming trip.</p>
+      </div>
+      
+      <div class="card">
+        <form id="risk-form">
+          <div class="form-group">
+            <label for="destination">Where are you traveling?</label>
+            <select id="destination" class="form-control" required>
+              <option value="">Select a country...</option>
+              <optgroup label="High Surveillance">
+                <option value="china">China</option>
+                <option value="russia">Russia</option>
+                <option value="iran">Iran</option>
+                <option value="north-korea">North Korea</option>
+                <option value="uae">United Arab Emirates</option>
+                <option value="saudi-arabia">Saudi Arabia</option>
+                <option value="egypt">Egypt</option>
+                <option value="turkey">Turkey</option>
+                <option value="vietnam">Vietnam</option>
+                <option value="thailand">Thailand</option>
+              </optgroup>
+              <optgroup label="Moderate Surveillance">
+                <option value="india">India</option>
+                <option value="indonesia">Indonesia</option>
+                <option value="malaysia">Malaysia</option>
+                <option value="brazil">Brazil</option>
+                <option value="mexico">Mexico</option>
+                <option value="south-africa">South Africa</option>
+              </optgroup>
+              <optgroup label="Lower Surveillance">
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="japan">Japan</option>
+                <option value="singapore">Singapore</option>
+                <option value="spain">Spain</option>
+                <option value="italy">Italy</option>
+              </optgroup>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="purpose">What is the purpose of your travel?</label>
+            <select id="purpose" class="form-control" required>
+              <option value="">Select purpose...</option>
+              <option value="tourism">Tourism / Vacation</option>
+              <option value="business">Business</option>
+              <option value="journalism">Journalism / Media</option>
+              <option value="activism">Activism / NGO Work</option>
+              <option value="research">Research / Academic</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>How many devices will you bring?</label>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <label style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="devices" value="1" checked> 1 device
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="devices" value="2"> 2 devices
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="devices" value="3+"> 3+ devices
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="sensitive-data">Will you be carrying or accessing sensitive data?</label>
+            <select id="sensitive-data" class="form-control" required>
+              <option value="">Select an option...</option>
+              <option value="no">No sensitive data</option>
+              <option value="yes">Yes (work documents, client data, etc.)</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Assess My Risk</button>
+        </form>
+      </div>
+      
+      <div id="risk-results" class="hidden"></div>
+    </section>
+
+    <!-- Checklist Page -->
+    <section id="checklist" class="page">
+      <div class="hero">
+        <h1>Pre-Travel Privacy Checklist</h1>
+        <p>Complete these steps before your trip to maximize your digital security and privacy.</p>
+      </div>
+      
+      <div class="card">
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 0%;">0% Complete</div>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-1">
+          <label for="check-1">Update all software, operating systems, and apps to latest versions</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-2">
+          <label for="check-2">Enable two-factor authentication on all important accounts (email, banking, social media)</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-3">
+          <label for="check-3">Install a reputable VPN service and test it before traveling</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-4">
+          <label for="check-4">Create strong, unique passwords for all accounts (use a password manager)</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-5">
+          <label for="check-5">Backup all important data to cloud storage and/or external drive</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-6">
+          <label for="check-6">Enable device encryption (FileVault for Mac, BitLocker for Windows)</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-7">
+          <label for="check-7">Remove unnecessary apps and sensitive files from travel devices</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-8">
+          <label for="check-8">Set up "Find My Device" or similar tracking on all devices</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-9">
+          <label for="check-9">Configure privacy settings on social media accounts</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-10">
+          <label for="check-10">Research local laws about VPNs, encryption, and digital privacy in your destination</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-11">
+          <label for="check-11">Install encrypted messaging apps (Signal, WhatsApp with encryption enabled)</label>
+        </div>
+        
+        <div class="checklist-item">
+          <input type="checkbox" id="check-12">
+          <label for="check-12">Prepare a plan for secure communication with family/colleagues back home</label>
+        </div>
+        
+        <button id="reset-checklist" class="btn mt-md" style="background: #dc3545; color: white;">Reset Checklist</button>
+      </div>
+      
+      <div class="card mt-md">
+        <h3>💡 Pro Tip</h3>
+        <p>Consider using a dedicated "travel laptop" or phone with minimal sensitive data. This reduces risk if your devices are searched, seized, or compromised.</p>
+      </div>
+    </section>
+
+    <!-- Country Notes Page -->
+    <section id="country-notes" class="page">
+      <div class="hero">
+        <h1>Country-Specific Privacy Guides</h1>
+        <p>Understand the digital privacy landscape in your destination country.</p>
+      </div>
+      
+      <div class="card mb-md">
+        <input type="text" id="country-search" class="form-control" placeholder="Search countries or regions...">
+      </div>
+      
+      <div class="country-grid">
+        <div class="country-card" data-country="china" data-region="asia high-surveillance">
+          <h3><span class="country-flag">🇨🇳</span> China</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-high">HIGH</span></p>
+          <p><strong>Key Concerns:</strong> The Great Firewall blocks most Western websites and apps. Extensive surveillance infrastructure. VPNs are restricted.</p>
+          <p><strong>Recommendations:</strong> Install multiple VPNs before arrival. Use offline maps. Avoid discussing sensitive topics. Consider a travel-only device.</p>
+        </div>
+        
+        <div class="country-card" data-country="russia" data-region="europe high-surveillance">
+          <h3><span class="country-flag">🇷🇺</span> Russia</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-high">HIGH</span></p>
+          <p><strong>Key Concerns:</strong> Increasing internet censorship. Data localization laws. Border officials may request device searches.</p>
+          <p><strong>Recommendations:</strong> Use encrypted communications. Be cautious at borders. Keep social media activity clean. Have VPN ready.</p>
+        </div>
+        
+        <div class="country-card" data-country="uae" data-region="middle-east high-surveillance">
+          <h3><span class="country-flag">🇦🇪</span> United Arab Emirates</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-high">HIGH</span></p>
+          <p><strong>Key Concerns:</strong> VoIP calls blocked. Strict content laws. Surveillance common. VPN use restricted to licensed providers.</p>
+          <p><strong>Recommendations:</strong> Use WhatsApp calls carefully. Avoid controversial content. Respect local laws strictly.</p>
+        </div>
+        
+        <div class="country-card" data-country="usa" data-region="north-america five-eyes">
+          <h3><span class="country-flag">🇺🇸</span> United States</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-medium">MEDIUM</span></p>
+          <p><strong>Key Concerns:</strong> CBP has broad search powers at borders. Five Eyes intelligence sharing. No federal privacy law.</p>
+          <p><strong>Recommendations:</strong> Know your rights at borders. Use encryption. Consider cloud backup before crossing. Be aware of data requests.</p>
+        </div>
+        
+        <div class="country-card" data-country="uk" data-region="europe five-eyes">
+          <h3><span class="country-flag">🇬🇧</span> United Kingdom</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-medium">MEDIUM</span></p>
+          <p><strong>Key Concerns:</strong> Investigatory Powers Act allows broad surveillance. Border searches possible. CCTV everywhere.</p>
+          <p><strong>Recommendations:</strong> Use encryption. Be aware of anti-protest laws. Understand data retention requirements.</p>
+        </div>
+        
+        <div class="country-card" data-country="germany" data-region="europe eu">
+          <h3><span class="country-flag">🇩🇪</span> Germany</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-low">LOW</span></p>
+          <p><strong>Key Concerns:</strong> Strong privacy laws (GDPR). Some data retention requirements. Generally privacy-friendly.</p>
+          <p><strong>Recommendations:</strong> GDPR protects you. Public Wi-Fi generally safe with VPN. Respect local recording laws.</p>
+        </div>
+        
+        <div class="country-card" data-country="india" data-region="asia moderate-surveillance">
+          <h3><span class="country-flag">🇮🇳</span> India</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-medium">MEDIUM</span></p>
+          <p><strong>Key Concerns:</strong> Increasing internet shutdowns. New data protection laws. Occasional app bans.</p>
+          <p><strong>Recommendations:</strong> Have offline backups. Use VPN for sensitive activities. Stay informed about local restrictions.</p>
+        </div>
+        
+        <div class="country-card" data-country="japan" data-region="asia">
+          <h3><span class="country-flag">🇯🇵</span> Japan</h3>
+          <p><strong>Risk Level:</strong> <span class="risk-level risk-low">LOW</span></p>
+          <p><strong>Key Concerns:</strong> Generally privacy-friendly. Some surveillance in urban areas. Good digital infrastructure.</p>
+          <p><strong>Recommendations:</strong> Standard precautions apply. Public Wi-Fi widely available. Low risk overall.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+      <div class="hero">
+        <h1>About Travel Privacy Toolkit</h1>
+        <p>Empowering travelers with knowledge and tools to protect their digital privacy.</p>
+      </div>
+      
+      <div class="legal-content">
+        <h2>Our Mission</h2>
+        <p>Travel Privacy Toolkit was created to help travelers understand and mitigate the digital privacy risks they face when traveling internationally. Whether you're a tourist, business traveler, journalist, or activist, your digital security matters.</p>
+        
+        <h2>Why We Built This</h2>
+        <p>In an increasingly connected world, travelers face unique privacy challenges:</p>
+        <ul>
+          <li>Public Wi-Fi networks that can intercept your data</li>
+          <li>Border crossings where devices may be searched</li>
+          <li>Varying surveillance laws in different countries</li>
+          <li>Internet censorship and restrictions</li>
+          <li>Increased cybercrime targeting travelers</li>
+        </ul>
+        
+        <h2>What We Offer</h2>
+        <p>All our tools are completely free and require no signup:</p>
+        <ul>
+          <li><strong>Risk Checker:</strong> Personalized risk assessment for your destination</li>
+          <li><strong>Security Checklist:</strong> Comprehensive pre-travel preparation guide</li>
+          <li><strong>Country Notes:</strong> Detailed privacy guides for specific countries</li>
+        </ul>
+        
+        <h2>About Our Recommendations</h2>
+        <p>We may recommend products and services that we believe genuinely help protect traveler privacy, including VPN services like NordVPN. Some of these links are affiliate links, which means we may earn a small commission if you make a purchase—at no additional cost to you.</p>
+        <p>We only recommend services after careful research and because we believe they provide real value for protecting your privacy while traveling.</p>
+        
+        <h2>Contact Us</h2>
+        <p>Have questions or suggestions? We'd love to hear from you. This toolkit is constantly evolving based on user feedback and the changing landscape of digital privacy.</p>
+        
+        <div class="affiliate-disclosure mt-md">
+          <p><strong>Affiliate Disclosure:</strong> This website contains affiliate links. If you click on these links and make a purchase, we may receive a commission. This helps support our work providing free privacy resources to travelers worldwide.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy Page -->
+    <section id="privacy-policy" class="page">
+      <div class="legal-content">
+        <h1>Privacy Policy</h1>
+        <p><em>Last updated: January 2025</em></p>
+        
+        <h2>Introduction</h2>
+        <p>Travel Privacy Toolkit ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+        
+        <h2>Information We Collect</h2>
+        <p><strong>Personal Information:</strong> We do not collect personally identifiable information from visitors. Our website is designed to function without requiring any personal data.</p>
+        
+        <p><strong>Non-Personal Information:</strong> Like most websites, we may use cookies and similar technologies to enhance user experience. This includes:</p>
+        <ul>
+          <li>Browser type and version</li>
+          <li>Operating system</li>
+          <li>Referring website addresses</li>
+          <li>Pages visited and time spent</li>
+          <li>Device information</li>
+        </ul>
+        
+        <h2>Local Storage</h2>
+        <p>Our checklist feature uses browser local storage to save your progress. This data is stored only on your device and is not transmitted to our servers or shared with third parties.</p>
+        
+        <h2>How We Use Information</h2>
+        <p>Any non-personal information collected is used solely to:</p>
+        <ul>
+          <li>Improve website functionality</li>
+          <li>Understand user behavior to enhance content</li>
+          <li>Save your checklist preferences locally</li>
+        </ul>
+        
+        <h2>Third-Party Links</h2>
+        <p>Our website contains links to third-party websites, including affiliate partners. We are not responsible for the privacy practices or content of these external sites. We encourage you to review their privacy policies.</p>
+        
+        <h2>Affiliate Relationships</h2>
+        <p>We participate in affiliate marketing programs, including the NordVPN affiliate program. When you click on affiliate links and make purchases, we may receive commissions. This does not affect the price you pay.</p>
+        
+        <h2>Data Security</h2>
+        <p>Since we do not collect or store personal information on our servers, there is minimal risk of data breaches. Any data stored locally on your device (such as checklist progress) is under your control.</p>
+        
+        <h2>Children's Privacy</h2>
+        <p>Our website is intended for general audiences and is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+        
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a revised "Last updated" date.</p>
+        
+        <h2>Contact Information</h2>
+        <p>If you have questions about this Privacy Policy, please contact us through our website.</p>
+      </div>
+    </section>
+
+    <!-- Terms of Service Page -->
+    <section id="terms" class="page">
+      <div class="legal-content">
+        <h1>Terms of Service</h1>
+        <p><em>Last updated: January 2025</em></p>
+        
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing and using the Travel Privacy Toolkit website, you accept and agree to be bound by the terms and provisions of this agreement.</p>
+        
+        <h2>No Professional Advice</h2>
+        <p>The information provided on this website is for general informational and educational purposes only. It is not intended as professional security advice, legal advice, or travel advice. Always consult with qualified professionals for specific guidance related to your situation.</p>
+        
+        <h2>No Warranties</h2>
+        <p>This website and all its content, tools, and resources are provided "as is" without warranty of any kind, express or implied. We do not warrant that:</p>
+        <ul>
+          <li>The information is accurate, complete, or current</li>
+          <li>The tools will meet your specific requirements</li>
+          <li>The website will be uninterrupted or error-free</li>
+          <li>Your use of the website will be secure</li>
+        </ul>
+        
+        <h2>Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Travel Privacy Toolkit shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your use of or inability to use this website, including but not limited to:</p>
+        <ul>
+          <li>Loss of data or information</li>
+          <li>Security breaches or privacy violations</li>
+          <li>Travel-related incidents or issues</li>
+          <li>Reliance on information provided on this website</li>
+        </ul>
+        
+        <h2>User Responsibilities</h2>
+        <p>You agree to:</p>
+        <ul>
+          <li>Use this website responsibly and ethically</li>
+          <li>Not misuse the tools or information provided</li>
+          <li>Conduct your own research before making security decisions</li>
+          <li>Comply with all applicable laws and regulations</li>
+        </ul>
+        
+        <h2>Intellectual Property</h2>
+        <p>All content on this website, including text, graphics, logos, and code, is the property of Travel Privacy Toolkit and is protected by copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works without explicit permission.</p>
+        
+        <h2>External Links</h2>
+        <p>This website may contain links to third-party websites. We do not endorse and are not responsible for the content, accuracy, or practices of these external sites.</p>
+        
+        <h2>Affiliate Disclosure</h2>
+        <p>This website contains affiliate links. We may receive compensation when you click on these links and make purchases. This does not affect the price you pay and helps support our free resources.</p>
+        
+        <h2>Modifications to Terms</h2>
+        <p>We reserve the right to modify these terms at any time. Continued use of the website after changes constitutes acceptance of the new terms.</p>
+        
+        <h2>Governing Law</h2>
+        <p>These terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
+        
+        <h2>Contact</h2>
+        <p>For questions about these Terms of Service, please contact us through our website.</p>
+      </div>
+    </section>
+
+    <!-- Affiliate Disclosure Page -->
+    <section id="affiliate-disclosure" class="page">
+      <div class="legal-content">
+        <h1>Affiliate Disclosure</h1>
+        <p><em>Last updated: January 2025</em></p>
+        
+        <h2>What Is an Affiliate Link?</h2>
+        <p>Affiliate links are special tracking links that allow us to earn a small commission when you make a purchase through them. These links look like regular links but contain a unique identifier that tells the merchant that you came from our website.</p>
+        
+        <h2>Our Affiliate Relationships</h2>
+        <p>Travel Privacy Toolkit participates in various affiliate marketing programs, including but not limited to:</p>
+        <ul>
+          <li><strong>NordVPN:</strong> We are affiliates of NordVPN and may earn commissions on subscriptions purchased through our links.</li>
+          <li>Other privacy and security tools that we believe benefit travelers</li>
+        </ul>
+        
+        <h2>What This Means for You</h2>
+        <ul>
+          <li><strong>No Extra Cost:</strong> You pay the same price (or sometimes less with our special offers) whether you use our affiliate links or go directly to the merchant.</li>
+          <li><strong>Supports Our Work:</strong> Commissions help us maintain this website and continue providing free resources to travelers worldwide.</li>
+          <li><strong>Transparent Relationship:</strong> We believe in being upfront about our affiliate relationships so you can make informed decisions.</li>
+        </ul>
+        
+        <h2>Our Recommendation Process</h2>
+        <p>We only recommend products and services that we have thoroughly researched and believe provide genuine value for protecting traveler privacy. Our recommendations are based on:</p>
+        <ul>
+          <li>Security features and effectiveness</li>
+          <li>User reviews and reputation</li>
+          <li>Privacy policies and data handling practices</li>
+          <li>Value for money</li>
+          <li>Customer support quality</li>
+        </ul>
+        
+        <h2>FTC Compliance</h2>
+        <p>In accordance with FTC guidelines, we want to be transparent about our affiliate relationships. When you see affiliate links on our website, assume that we may earn a commission if you make a purchase.</p>
+        
+        <h2>Our Commitment</h2>
+        <p>Despite earning commissions, we commit to:</p>
+        <ul>
+          <li>Providing honest, unbiased reviews and recommendations</li>
+          <li>Only promoting products we genuinely believe in</li>
+          <li>Disclosing affiliate relationships clearly</li>
+          <li>Prioritizing your privacy and security over commissions</li>
+        </ul>
+        
+        <h2>Questions?</h2>
+        <p>If you have any questions about our affiliate relationships or disclosure practices, please don't hesitate to contact us.</p>
+        
+        <div class="affiliate-disclosure mt-md">
+          <p><strong>Summary:</strong> This website contains affiliate links. We may earn commissions on purchases made through these links at no additional cost to you. This supports our mission of providing free privacy resources to travelers worldwide.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Travel Privacy Toolkit</h4>
+        <p style="font-size: 0.875rem; color: #cccccc; line-height: 1.6;">Free resources to help you protect your digital privacy while traveling the world.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home" data-page="home">Home</a></li>
+          <li><a href="#risk-checker" data-page="risk-checker">Risk Checker</a></li>
+          <li><a href="#checklist" data-page="checklist">Checklist</a></li>
+          <li><a href="#country-notes" data-page="country-notes">Country Notes</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#about" data-page="about">About Us</a></li>
+          <li><a href="#privacy-policy" data-page="privacy-policy">Privacy Policy</a></li>
+          <li><a href="#terms" data-page="terms">Terms of Service</a></li>
+          <li><a href="#affiliate-disclosure" data-page="affiliate-disclosure">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Travel Privacy Toolkit. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem;">This website contains affiliate links. We may earn commissions on qualifying purchases.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
