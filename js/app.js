@@ -172,7 +172,7 @@ function displayRiskResults(riskLevel, riskClass, riskScore, riskFactors, destin
       <div class="card mt-md" style="background: #e7f3ff; border-left: 4px solid #0066cc;">
         <h4 style="color: #0066cc; margin-bottom: 0.5rem;">🔒 Recommended: Use a VPN</h4>
         <p style="margin-bottom: 1rem;">For your safety, we recommend using a trusted VPN service like NordVPN to encrypt your connection and protect your privacy while traveling.</p>
-        <a href="https://go.nordvpn.net/aff_c?offer_id=1&aff_id=YOUR_AFFILIATE_ID" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary">Get NordVPN Now</a>
+        <a href="https://go.nordvpn.net/SHAzv" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary">Get NordVPN Now</a>
         <p style="font-size: 0.75rem; color: #666; margin-top: 0.5rem;">* This is an affiliate link. We may earn a commission at no extra cost to you.</p>
       </div>
     `;
